@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@1,800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            flex-flow: column wrap;
+        }
+
+        .Timer {
+            display: flex;
+        }
+
+        .Timer div {
+            width: 100px;
+            height: 100px;
+            background-color: #6b6b6b;
+            margin: 10px;
+            text-align: center;
+            font-size: 80px;
+            border-radius: 20%;
+            box-shadow: 5px 5px 10px 0;
+        }
+
+        h3 {
+            font-family: 'Shantell Sans', cursive;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Timer">
+        <div id="days"></div>
+        <div id="hours"></div>
+        <div id="minutes"></div>
+        <div id="seconds"></div>
+    </div>
+    <div>
+        <h3>Timer For My Next Birthday</h3>
+    </div>
+</body>
+<script src="main.js"></script>
+
+</html>
