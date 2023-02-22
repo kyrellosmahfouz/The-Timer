@@ -1,3 +1,7 @@
+* {
+    user-select: none;
+}
+
 body {
     display: flex;
     align-items: center;
@@ -5,17 +9,20 @@ body {
     margin: 0;
 }
 
+/* Start Header */
+
 .header {
-    width: 100vw;
+    width: calc(100vw - 20px);
     height: 60px;
     background-color: rgb(206, 206, 206);
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
 }
 
 .header span {
     font-size: 55px;
-    user-select: none;
 }
 
 .header h2 {
@@ -23,6 +30,26 @@ body {
     font-size: 34px;
     margin: 0 50px 0 0;
 }
+
+.header ul {
+    list-style: none;
+    padding: 0;
+    display: none;
+    position: absolute;
+    background-color: gray;
+    width: 150px;
+    right: 17px;
+    top: 40px;
+}
+
+.header ul li {
+    display: flex;
+    height: 30px;
+    align-items: center;
+    margin-left: 5px;
+}
+
+/* End Header */
 
 .days,
 .hours,
@@ -45,6 +72,13 @@ h3 {
 
 .timer {
     display: flex;
+}
+
+#birthday {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin-bottom: 45px;
 }
 
 @media (max-width:600px) {
