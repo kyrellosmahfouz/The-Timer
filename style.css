@@ -94,6 +94,10 @@ h3 {
         font-size: 25px;
     }
 
+    .header ul {
+        top: 20px;
+    }
+
     .days,
     .hours,
     .minutes,
