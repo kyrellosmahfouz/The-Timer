@@ -35,12 +35,20 @@
                 <li><input type="checkbox" id="cbfbir" checked style="cursor: pointer;">
                     <label for="cbfbir" style="width: 100%;cursor: pointer;">Birthday</label>
                 </li>
-                <li>Contact Us</li>
-                <li class="about">About</li>
+                <li><input type="checkbox" id="cbfeoty" checked style="cursor: pointer;">
+                    <label for="cbfeoty" style="width: 100%;cursor: pointer;">End of The Year</label>
+                </li>
+                <li><input type="checkbox" id="cbfct" checked style="cursor: pointer;">
+                    <label for="cbfct" style="width: 100%;cursor: pointer;">Custom Timer</label>
+                </li>
+                <!-- <li>Contact Us</li> -->
+                <li class="about" style="justify-content: space-between;">About <p
+                        style="font-size: x-small;font-size: 10px;margin-right: 8px;">v2023</p>
+                </li>
             </ul>
         </div>
     </div>
-    <div id="birthday">
+    <div id="birthday" class="section">
         <div class="timer">
             <div class="days" id="birdays"></div>
             <div class="hours" id="birhours"></div>
@@ -51,12 +59,12 @@
             <h3>Timer For Your Next Birthday</h3>
         </div>
         <div>
-            <input type="date" style="height: 25px;" id="input_Birthday">
-            <input type="button" id="Reset-Birthday-Button" value="Reset Birthday"
-                style="height: 29px;cursor: pointer;">
+            <input type="date" id="input_Birthday" class="date_input">
+            <input type="button" id="Reset-Birthday-Button" class="button" value="Reset Birthday">
         </div>
+        <div class="birthday_title title" style="padding: 15px;"></div>
     </div>
-    <div class="eoty" style="margin-bottom: 45px;">
+    <div class="eoty section">
         <div class="timer">
             <div class="days" id="eotydays"></div>
             <div class="hours" id="eotyhours"></div>
@@ -66,6 +74,23 @@
         <div>
             <h3>Timer For End Of The Year</h3>
         </div>
+    </div>
+    <div class="custom_timer section">
+        <div class="timer">
+            <div class="days" id="ctdays"></div>
+            <div class="hours" id="cthours"></div>
+            <div class="minutes" id="ctminutes"></div>
+            <div class="seconds" id="ctseconds"></div>
+        </div>
+        <div>
+            <h3>Custom Timer</h3>
+        </div>
+        <div>
+            <input type="date" id="input_ct" class="date_input">
+            <input type="button" id="Reset_ct_button" class="button" value="Reset Custom Time">
+        </div>
+        <div class="ct_title title" style="padding: 15px;"></div>
+    </div>
     </div>
 
 </body>

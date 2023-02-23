@@ -13,7 +13,7 @@ body {
 /* Start Header */
 
 .header {
-    width: calc(100vw - 20px);
+    width: calc(100% - 20px);
     height: 60px;
     background-color: rgb(206, 206, 206);
     display: flex;
@@ -36,12 +36,21 @@ body {
 .header ul {
     list-style: none;
     padding: 0;
-    display: none;
     position: absolute;
     background-color: var(--main-color);
     width: 150px;
-    right: 17px;
+    right: -50px;
+    top: -50px;
+    border-radius: 10px;
+    transition: 0.3s;
+    transform: scale(0);
+}
+
+.header ul.show {
+    display: block;
+    transform: scale(1);
     top: 40px;
+    right: 17px;
 }
 
 .header ul li {
@@ -52,11 +61,25 @@ body {
     cursor: pointer;
 }
 
+.header ul li label {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
 .header ul li:hover {
     background-color: gray;
 }
 
 /* End Header */
+.date_input {
+    height: 25px;
+}
+
+.button {
+    height: 29px;
+    cursor: pointer;
+}
 
 .days,
 .hours,
@@ -77,11 +100,16 @@ h3 {
     text-align: center;
 }
 
+.title {
+    font-family: 'Shantell Sans', cursive;
+    font-size: 20px;
+}
+
 .timer {
     display: flex;
 }
 
-#birthday {
+.section {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
@@ -90,19 +118,28 @@ h3 {
 
 @media (max-width:600px) {
     .header {
-        height: 40px;
+        height: 45px;
     }
 
     .header span {
-        font-size: 35px;
+        font-size: 40px;
     }
 
     .header h2 {
-        font-size: 25px;
+        font-size: 30px;
     }
 
-    .header ul {
+    .header ul.show {
         top: 20px;
+    }
+
+    .date_input {
+        height: 21px;
+    }
+
+    .button {
+        height: 25px;
+        cursor: pointer;
     }
 
     .days,
@@ -118,15 +155,21 @@ h3 {
 
 @media (max-width:370px) {
     .header {
-        height: 20px;
+        height: 30px;
     }
 
     .header span {
-        font-size: 18px;
+        font-size: 27px;
     }
 
     .header h2 {
-        font-size: 10px;
+        font-size: 17px;
+    }
+
+    .header ul.show {
+        top: 13px;
+        width: 130px;
+        font-size: 13px;
     }
 
     .days,
@@ -138,8 +181,12 @@ h3 {
         height: 40px;
     }
 
-    #birthday {
-        margin-bottom: 35px;
+    .title {
+        font-size: 18px;
+    }
+
+    .section {
+        margin-bottom: 25px;
     }
 
     h3 {
