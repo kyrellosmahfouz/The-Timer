@@ -198,5 +198,7 @@ reset_ct_button = document.getElementById("Reset_ct_button")
 reset_ct_button.onclick = _ => {
     window.localStorage.ct_date = (input_ct.value)
     ct_date = window.localStorage.ct_date
+    ct_title.innerHTML = ct_date
+
 }
 // reset custom timer
