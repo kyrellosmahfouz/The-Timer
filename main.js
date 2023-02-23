@@ -1,3 +1,5 @@
+var birthdate = window.localStorage.birthdate
+
 // Start Header Menu
 var menu_icon = document.querySelector("#menu_icon")
 var header_menu = document.querySelector("#header_menu")
@@ -13,6 +15,7 @@ function display_menu() {
 display_menu()
 // End Header Menu
 
+// Start Display Birthday Section
 
 var checkbox_for_birthday = document.getElementById("cbfbir")
 var birthday_section = document.getElementById("birthday")
@@ -27,27 +30,34 @@ function birthday_display() {
     }
 }
 
+// End Display Birthday Section
+
+// Start About_Alert
+var about = document.querySelector(".about")
+about.onclick = _ => {
+    alert("This Web Application Devoloped by Kyrellos Mahfouz Hanna")
+}
+// End About_Alert
+
 window.onload = _ => {
     if (window.localStorage.birthday_display == "false") {
         birthday_section.style.display = "none"
-        checkbox_for_birthday == false
+        checkbox_for_birthday.checked = false
     }
+    // window.localStorage.birthdate = birthdate;
 }
 
 // Start Reset Birthday
-// var input_birthday = document.getElementById("input_Birthday")
-// var Reset_Birthday_Button = document.getElementById("Reset-Birthday-Button")
-// Reset_Birthday_Button.addEventListener("click", Reset_Birthday)
-// function Reset_Birthday() {
-//     birsec = new Date(`${input_birthday.value} 00:00:00`).getTime()
-//     console.log(birsec)
-//     return birsec
-// }
-// birsec = Reset_Birthday
+var input_birthday = document.getElementById("input_Birthday")
+var Reset_Birthday_Button = document.getElementById("Reset-Birthday-Button")
+Reset_Birthday_Button.onclick = _ => {
+    birthdate = input_birthday.value
+    window.localStorage.birthdate = input_birthday.value
+}
 // End Reset Birthday
 
 function birthday() {
-    var birsec = new Date("Apr 8 , 2023 00:00:00").getTime()
+    var birsec = new Date(`${birthdate} 00:00:00`).getTime()
 
     datenow = new Date().getTime()
 

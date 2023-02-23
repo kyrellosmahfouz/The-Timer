@@ -1,12 +1,13 @@
-* {
-    user-select: none;
-}
-
 body {
     display: flex;
     align-items: center;
     flex-flow: column wrap;
     margin: 0;
+}
+
+:root {
+    --main-color: rgb(175, 175, 175);
+    --sec-color: grey;
 }
 
 /* Start Header */
@@ -23,6 +24,7 @@ body {
 
 .header span {
     font-size: 55px;
+    user-select: none;
 }
 
 .header h2 {
@@ -36,7 +38,7 @@ body {
     padding: 0;
     display: none;
     position: absolute;
-    background-color: gray;
+    background-color: var(--main-color);
     width: 150px;
     right: 17px;
     top: 40px;
@@ -46,7 +48,12 @@ body {
     display: flex;
     height: 30px;
     align-items: center;
-    margin-left: 5px;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+.header ul li:hover {
+    background-color: gray;
 }
 
 /* End Header */
@@ -106,5 +113,46 @@ h3 {
         height: 50px;
         margin: 10px;
         font-size: 40px;
+    }
+}
+
+@media (max-width:370px) {
+    .header {
+        height: 20px;
+    }
+
+    .header span {
+        font-size: 18px;
+    }
+
+    .header h2 {
+        font-size: 10px;
+    }
+
+    .days,
+    .hours,
+    .minutes,
+    .seconds {
+        width: 50px;
+        font-size: 30px;
+        height: 40px;
+    }
+
+    #birthday {
+        margin-bottom: 35px;
+    }
+
+    h3 {
+        font-size: 15px;
+    }
+
+    #input_birthday {
+        width: 100px;
+        height: 20px;
+    }
+
+    #Reset_Birthday_Button {
+        height: 24px;
+        width: 100px;
     }
 }
