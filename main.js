@@ -125,6 +125,7 @@ function birthday() {
         document.querySelector("#birhours").innerHTML = 0;
         document.querySelector("#birminutes").innerHTML = 0;
         document.querySelector("#birseconds").innerHTML = 0;
+        birthday_title.innerHTML = "Finished"
     }
 }
 
@@ -187,6 +188,7 @@ function custom_time() {
         document.querySelector("#cthours").innerHTML = 0;
         document.querySelector("#ctminutes").innerHTML = 0;
         document.querySelector("#ctseconds").innerHTML = 0;
+        ct_title.innerHTML = "Finished"
     }
 }
 
