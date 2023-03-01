@@ -3,11 +3,15 @@ body {
     align-items: center;
     flex-flow: column wrap;
     margin: 0;
+    background-color: var(--main-dark-color);
 }
 
 :root {
-    --main-color: rgb(175, 175, 175);
-    --sec-color: grey;
+    --main-color: rgb(156 160 176);
+    --sec-color: #777887;
+    --main-dark-color: #9193a8;
+    --unit-color: #757682;
+    --header-color: #757682;
 }
 
 /* Start Header */
@@ -15,7 +19,7 @@ body {
 .header {
     width: calc(100% - 20px);
     height: 60px;
-    background-color: rgb(206, 206, 206);
+    background-color: var(--header-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -68,7 +72,7 @@ body {
 }
 
 .header ul li:hover {
-    background-color: gray;
+    background-color: var(--sec-color);
 }
 
 /* End Header */
@@ -87,7 +91,7 @@ body {
 .seconds {
     width: 130px;
     height: 100px;
-    background-color: #6b6b6b;
+    background-color: var(--unit-color);
     margin: 10px;
     text-align: center;
     font-size: 80px;
